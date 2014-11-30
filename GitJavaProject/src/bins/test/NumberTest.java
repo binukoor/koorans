@@ -1,5 +1,7 @@
 package bins.test;
 
+import java.util.Arrays;
+
 public class NumberTest {
 
 	public static void main(String[] args) {
@@ -9,9 +11,32 @@ public class NumberTest {
 		Integer n2 = Integer.parseInt("6");
 		System.out.println(n2.doubleValue());
 		
+		String sourceStr="Binu Kooran _$Njarakal";
+		
+		//char[] str = {'B','n'}
+		
+		String targetStr=null;
+		
+
+		char[] source = sourceStr.toCharArray();
+		
+		for (char c:source ){
+			if (Character.isAlphabetic(c)){
+				targetStr=targetStr+c;
+			}
+		}
+		
+
+		char[] chars = targetStr.toCharArray();
+		
+		Arrays.sort(chars);
+		String sorted = new String(chars);
+		System.out.println(sorted);
+		
+		/*
 		char s[] = {'y','6','u','t','3'};
-		char c[]=null;
-		int n[]=null;
+		char c[]={};
+		int n[]={}; 
 		int nctr=0;
 		int cctr=0;
 		for (char i : s){			
@@ -27,5 +52,6 @@ public class NumberTest {
 		System.out.println(n.toString());
 		System.out.println("characters");
 		System.out.println(c.toString());
+		*/
 	}
 }
